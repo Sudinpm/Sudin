@@ -1,0 +1,8 @@
+steps:
+- task: PythonScript@0
+  inputs:
+    scriptSource: 'inline'
+    script: |
+      print("Hello, World!")
+      curl -X GET "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=0b05944e6d83427985c44aaf2c865aee" \
+      -H "Content-Type: application/json"
